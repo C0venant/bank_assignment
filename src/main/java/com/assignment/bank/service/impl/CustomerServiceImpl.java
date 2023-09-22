@@ -4,6 +4,7 @@ import com.assignment.bank.entity.Card;
 import com.assignment.bank.entity.Customer;
 import com.assignment.bank.entity.model.CardType;
 import com.assignment.bank.entity.model.CustomerType;
+import com.assignment.bank.exception.CustomerNotFoundException;
 import com.assignment.bank.repository.AccountRepository;
 import com.assignment.bank.repository.CardRepository;
 import com.assignment.bank.repository.CustomerRepository;
@@ -31,8 +32,9 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional(readOnly = true)
     public CustomerDto getCustomerDataById(long id) {
-        //hande customer not found
-        Customer customer = customerRepository.findById(id).orElseThrow();
+        Customer customer = customerRepository
+                .findById(id)
+                .orElseThrow(() -> new CustomerNotFoundException("Customer with id: " + id + " is not present"));
         List<IdValueWrapper> accounts = getCustomerAccountDetails(id);
         List<IdValueWrapper> cards = getCustomerCardDetails(id, customer.getType());
         return CustomerDto.of(customer, cards, accounts);
