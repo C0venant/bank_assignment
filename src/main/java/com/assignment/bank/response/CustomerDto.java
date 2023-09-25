@@ -4,10 +4,11 @@ import java.util.List;
 
 import com.assignment.bank.entity.Customer;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record CustomerDto(
         long id,
-        String fullName,
+        @JsonProperty(value = "full_name") String fullName,
         String type,
         @JsonInclude(JsonInclude.Include.NON_EMPTY) List<IdValueWrapper> cards,
         @JsonInclude(JsonInclude.Include.NON_EMPTY) List<IdValueWrapper> accounts) {
