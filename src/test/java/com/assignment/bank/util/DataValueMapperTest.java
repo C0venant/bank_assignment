@@ -13,7 +13,7 @@ class DataValueMapperTest {
         var account = TestDataGenerator.getAccount();
         var result = DataValueMapper.accountToValue(account);
         assertEquals(account.getId(), result.id());
-        assertEquals(String.format("%s - %.2f %s", account.getIban(), account.getBalance(), account.getCurrency()),
+        assertEquals(String.format("%s - %s %s", account.getIban(), account.getBalance(), account.getCurrency()),
                 result.value());
     }
 

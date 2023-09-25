@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class DataValueMapper {
 
-    private static final String ACCOUNT_VALUE_TEMPLATE = "%s - %.2f %s";
+    private static final String ACCOUNT_VALUE_TEMPLATE = "%s - %s %s";
 
     private static final String CARD_VALUE_TEMPLATE = "%s - %s";
 

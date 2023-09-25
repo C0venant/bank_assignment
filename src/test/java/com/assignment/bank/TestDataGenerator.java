@@ -1,5 +1,6 @@
 package com.assignment.bank;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 import com.assignment.bank.entity.Account;
@@ -31,7 +32,7 @@ public final class TestDataGenerator {
 
     public static Account getAccount() {
         Account account = new Account();
-        account.setBalance(100.2f);
+        account.setBalance(new BigDecimal("100.23"));
         account.setIban("LT601010012345678901");
         account.setCurrency("EUR");
         return account;

@@ -1,5 +1,7 @@
 package com.assignment.bank.entity;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -24,6 +26,5 @@ public class Account {
 
     private String currency;
 
-    //maybe different type?
-    private float balance;
+    private BigDecimal balance;
 }
