@@ -20,7 +20,9 @@ import com.assignment.bank.service.CustomerService;
 import com.assignment.bank.util.DataValueMapper;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
@@ -34,6 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional(readOnly = true)
     public CustomerDto getCustomerDataById(long id) {
+        log.info("Retrieving customer data with id: {}", id);
         Customer customer = customerRepository
                 .findById(id)
                 .orElseThrow(() -> new CustomerNotFoundException("Customer with id: " + id + " is not present"));
