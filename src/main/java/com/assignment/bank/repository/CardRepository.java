@@ -1,9 +1,10 @@
 package com.assignment.bank.repository;
 
-import com.assignment.bank.entity.Card;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import com.assignment.bank.entity.Card;
 
 public interface CardRepository extends JpaRepository<Card, Long> {
 

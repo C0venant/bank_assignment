@@ -1,9 +1,9 @@
 package com.assignment.bank.response;
 
+import java.util.List;
+
 import com.assignment.bank.entity.Customer;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import java.util.List;
 
 public record CustomerDto(
         long id,

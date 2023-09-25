@@ -1,9 +1,10 @@
 package com.assignment.bank.util;
 
-import com.assignment.bank.TestDataGenerator;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.assignment.bank.TestDataGenerator;
 
 class DataValueMapperTest {
 

@@ -1,16 +1,17 @@
 package com.assignment.bank;
 
+import java.sql.Timestamp;
+
 import com.assignment.bank.entity.Account;
 import com.assignment.bank.entity.Card;
 import com.assignment.bank.entity.Customer;
 import com.assignment.bank.entity.model.CardType;
 import com.assignment.bank.entity.model.CustomerType;
 
-import java.sql.Timestamp;
-
 public final class TestDataGenerator {
 
-    private TestDataGenerator() {}
+    private TestDataGenerator() {
+    }
 
     public static Customer getPersonalCustomer() {
         Customer customer = new Customer();
