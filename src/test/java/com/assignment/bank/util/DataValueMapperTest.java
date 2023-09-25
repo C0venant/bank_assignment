@@ -18,7 +18,7 @@ class DataValueMapperTest {
     }
 
     @Test
-    void accountToValueMapping() {
+    void testAccountToValueMapping() {
         var card = TestDataGenerator.getCreditCard();
         var result = DataValueMapper.cardToValue(card);
         assertEquals(card.getId(), result.id());
