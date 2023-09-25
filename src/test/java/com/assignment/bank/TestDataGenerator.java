@@ -11,8 +11,7 @@ import com.assignment.bank.entity.model.CustomerType;
 
 public final class TestDataGenerator {
 
-    private TestDataGenerator() {
-    }
+    private TestDataGenerator() {}
 
     public static Customer getPersonalCustomer() {
         Customer customer = new Customer();

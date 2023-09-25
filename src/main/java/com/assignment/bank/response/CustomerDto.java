@@ -10,8 +10,7 @@ public record CustomerDto(
         String fullName,
         String type,
         @JsonInclude(JsonInclude.Include.NON_EMPTY) List<IdValueWrapper> cards,
-        @JsonInclude(JsonInclude.Include.NON_EMPTY) List<IdValueWrapper> accounts
-) {
+        @JsonInclude(JsonInclude.Include.NON_EMPTY) List<IdValueWrapper> accounts) {
 
     public static CustomerDto of(Customer customer,
                                  List<IdValueWrapper> cards,

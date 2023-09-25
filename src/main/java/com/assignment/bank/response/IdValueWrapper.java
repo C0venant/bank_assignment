@@ -1,5 +1,6 @@
 package com.assignment.bank.response;
 
-public record IdValueWrapper(long id,
-                             String value) {
+public record IdValueWrapper(
+        long id,
+        String value) {
 }

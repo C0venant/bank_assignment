@@ -24,5 +24,4 @@ class DataValueMapperTest {
         assertEquals(card.getId(), result.id());
         assertEquals("xxxx xxxx xxxx 4125 - Credit", result.value());
     }
-
 }
